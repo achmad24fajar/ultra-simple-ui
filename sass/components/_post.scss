@@ -1,0 +1,51 @@
+.all-posts {
+    &--title {
+        font-family: $inria;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    &--lists {
+        .lists-item {
+            display: flex;
+            margin-bottom: 20px;
+            @include respond(phone){
+                display: block;
+            }
+            &--thumbnail {
+                margin-right: 10px;
+                border-radius: 3px;
+                @include respond(phone){
+                    margin-right: 0;
+                    width: 100%;
+                }
+            }
+            &--info {
+                .post-title {
+                    font-family: $kanit;
+                    font-size: 1.7rem;
+                }
+                p {
+                    color: $color-dark-2;
+                    font-family: $kanit;
+                    .btn-text {
+                        text-decoration: none;
+                        font-style: italic;
+                        color: $color-dark-2;
+                    }
+                }
+            }
+        }
+    }
+    &--pagination {
+        text-align: center;
+        .btn-text {
+            text-decoration: none;
+            color: $color-dark-2;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: $inria;
+        }
+    }
+}

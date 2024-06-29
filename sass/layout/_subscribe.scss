@@ -1,0 +1,11 @@
+.subscribe {
+    padding: 2rem 10rem;
+    background-color: $color-muted-2;
+    text-align: center;
+    @include respond(tab-port) {
+        padding: 2rem 5rem 2rem 5rem;
+    }
+    @include respond(phone) {
+        padding: 2rem 1rem 2rem 1rem;
+    }
+}

@@ -1,0 +1,49 @@
+.subscribe {
+    &--title {
+        font-family: $inria;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    &--input-group {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .text-input {
+            outline: none;
+            border: none;
+            background: $color-muted-1;
+            padding: 10px;
+            font-size: 1.5rem;
+            margin-right: 5px;
+            width: 50%;
+            font-family: $kanit;
+            transition: all .2s ease;
+            position: relative;
+            
+            &:focus,&:visited {
+                border-bottom: 2px solid $color-dark-2;
+            }
+        }
+        .btn-dark {
+            background: $color-dark-2;
+            outline: none;
+            border: none;
+            padding: 11px 10px;
+            color: $color-light;
+            cursor: pointer;
+            transition: background .5s ease;
+            font-family: $inria;
+            text-transform: uppercase;
+            &:hover {
+                background: $color-dark-1;
+            }
+        }
+    }
+    p {
+        font-family: $kanit;
+        font-size: 1.2rem;
+    }
+}

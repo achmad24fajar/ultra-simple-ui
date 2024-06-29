@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>ULTRA SIMPLE</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header--title">
+                <h1 class="header--title-brand">ULTRASIMPLE</h1>
+            </div>
+            <div class="header--menu">
+                <div class="header--menu-bar">
+                    <a href="#" class="header--menu-bar-link-search" onclick="toggleClass('search-box', 'search-active')">
+                        <svg><use xlink:href="/assets/icon/sprite.svg#icon-search" /></svg>
+                    </a>
+                    <a href="#" class="header--menu-bar-link" onclick="toggleClass('dropdown-menu-list', 'dropdown-active')">
+                        <svg><use xlink:href="/assets/icon/sprite.svg#icon-menu" /></svg>
+                    </a>
+                    <ul class="header--menu-dropdown-lists" id="dropdown-menu-list">
+                        <li class="header--menu-dropdown-lists-item"><a href="#">Home</a></li>
+                        <li class="header--menu-dropdown-lists-item"><a href="#">About Us</a></li>
+                        <li class="header--menu-dropdown-lists-item"><a href="#">Privacy Policy</a></li>
+                        <li class="header--menu-dropdown-lists-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="search-container" id="search-box">
+                    <label class="search-label">Search</label>
+                    <p>You can search based on title, category or author.</p>
+                    <input type="text" placeholder="Search somethings..." class="search-input" >
+                    <div class="no-result">No result found</div>
+                </div>
+                <ul class="header--menu-lists">
+                    <li class="header--menu-lists-item"><a href="#">Home</a></li>
+                    <li class="header--menu-lists-item"><a href="#">About Us</a></li>
+                    <li class="header--menu-lists-item"><a href="#">Privacy Policy</a></li>
+                    <li class="header--menu-lists-item"><a href="#">Contact Us</a></li>
+                    <li class="header--menu-lists-item"><a href="#" onclick="toggleClass('search-box', 'search-active')"><svg><use xlink:href="/assets/icon/sprite.svg#icon-search" /></svg></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="latest-post">
+            <div class="latest-post--indicator">
+                <div class="indicator" id="indicator-1" onclick="selectLatestPost(1)"></div>
+                <div class="indicator" id="indicator-2" onclick="selectLatestPost(2)"></div>
+                <div class="indicator" id="indicator-3" onclick="selectLatestPost(3)"></div>
+            </div>
+            <div class="image-container" id="image-1" style="background-image: url(/assets/slideshow-1.jpg);">
+                <div class="post-info">
+                    <div class="post-info-tag">
+                        <a class="post-info-tag--link" href="#">Programming</a>
+                    </div>
+                    <h3 class="post-info-title"><a href="#">Comfortable workspace for increase your productivity</a></h3>
+                </div>
+            </div>
+            <div class="image-container" id="image-2" style="background-image: url(/assets/slideshow-2.jpg);">
+                <div class="post-info">
+                    <div class="post-info-tag">
+                        <a class="post-info-tag--link" href="#">AI</a>
+                    </div>
+                    <h3 class="post-info-title"><a href="#">Can AI replace human workers</a></h3>
+                </div>
+            </div>
+            <div class="image-container" id="image-3" style="background-image: url(/assets/slideshow-3.jpg);">
+                <div class="post-info">
+                    <div class="post-info-tag">
+                        <a class="post-info-tag--link" href="#">Tips</a>
+                    </div>
+                    <h3 class="post-info-title"><a href="#">Maximal configuration Macbook for Programming</a></h3>
+                </div>
+            </div>
+        </div>
+        <div class="main-post">
+            <div class="all-posts">
+                <h2 class="all-posts--title">All Posts</h2>
+                <div class="all-posts--lists">
+                    <div class="lists-item">
+                        <img class="lists-item--thumbnail" src="/assets/img-post-1.png" />
+                        <div class="lists-item--info">
+                            <h3 class="post-title">[TUTORIAL] - Best way to build web with Python</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nemo omnis blanditiis facere ex, ratione perspiciatis obcaecati libero recusandae atque deserunt necessitatibus, molestiae laborum laudantium! Dolor, tenetur at. Fugiat, architecto. <a href="#" class="btn-text">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="lists-item">
+                        <img class="lists-item--thumbnail" src="/assets/img-post-2.png" />
+                        <div class="lists-item--info">
+                            <h3 class="post-title">[GUIDE] - How to be a Senior Programmer</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nemo omnis blanditiis facere ex, ratione perspiciatis obcaecati libero recusandae atque deserunt necessitatibus, molestiae laborum laudantium! Dolor, tenetur at. Fugiat, architecto. <a href="#" class="btn-text">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="lists-item">
+                        <img class="lists-item--thumbnail" src="/assets/img-post-3.png" />
+                        <div class="lists-item--info">
+                            <h3 class="post-title">[PERSPECTIVE] - Is it true Mac is the best device for Programming ?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nemo omnis blanditiis facere ex, ratione perspiciatis obcaecati libero recusandae atque deserunt necessitatibus, molestiae laborum laudantium! Dolor, tenetur at. Fugiat, architecto. <a href="#" class="btn-text">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="lists-item">
+                        <img class="lists-item--thumbnail" src="/assets/img-post-4.png" />
+                        <div class="lists-item--info">
+                            <h3 class="post-title">[PERSPECTIVE] - What is the best programming language in 2024 ?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nemo omnis blanditiis facere ex, ratione perspiciatis obcaecati libero recusandae atque deserunt necessitatibus, molestiae laborum laudantium! Dolor, tenetur at. Fugiat, architecto. <a href="#" class="btn-text">Read More</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-posts--pagination">
+                    <a href="#" class="btn-text">See All Posts</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar--lists">
+                    <h2 class="lists--title">Popular Posts</h2>
+                    <div class="lists-item">
+                        <span class="rank">#1</span>
+                        <h3 class="post-title">[TUTORIAL] - Best way to build web with Python</h3>
+                    </div>
+                    <div class="lists-item">
+                        <span class="rank">#2</span>
+                        <h3 class="post-title">[GUIDE] - How to be a Senior Programmer</h3>
+                    </div>
+                    <div class="lists-item">
+                        <span class="rank">#3</span>
+                        <h3 class="post-title">[PERSPECTIVE] - Is it true Mac is the best device for Programming ?</h3>
+                    </div>
+                    <div class="lists-item">
+                        <span class="rank">#4</span>
+                        <h3 class="post-title">[PERSPECTIVE] - What is the best programming language in 2024 ?</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="subscribe">
+        <h2 class="subscribe--title">Subscribe</h2>
+        <div class="subscribe--input-group">
+            <input placeholder="Type your email" type="email" class="text-input" />
+            <button class="btn-dark">Subscribe</button>
+        </div>
+        <p>Be up to date with subscribe this website!</p>
+    </div>
+    <footer>
+        <div class="footer">
+            <p>2024 ULTRASIMPLE</p>
+            <div class="footer--social">
+                <a href="#" class="footer--social-item"><img src="/assets/twitter.png" /></a>
+                <a href="#" class="footer--social-item"><img src="/assets/instagram.png" /></a>
+                <a href="#" class="footer--social-item"><img src="/assets/linkedin.png" /></a>
+                <a href="#" class="footer--social-item"><img src="/assets/facebook.png" /></a>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

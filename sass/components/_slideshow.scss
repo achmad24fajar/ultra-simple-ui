@@ -1,0 +1,71 @@
+.latest-post {
+    margin: 0 10rem 2rem 10rem;
+    height: 38rem;
+    position: relative;
+    @include respond(tab-port) {
+        margin: 0 5rem 2rem 5rem;
+    }
+    @include respond(phone) {
+        margin: 0 1rem 2rem 1rem;
+        height: 25rem;
+    }
+    .image-container {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 38rem;
+        border-radius: 5px;
+        position: absolute;
+        opacity: 0;
+        transition: all .3s ease;
+        @include respond(phone) {
+            height: 25rem;
+        }
+        .post-info {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            transition: all .3s ease;
+            &-tag {
+                background: $color-dark-2;
+                display: table;
+                padding: 5px 20px;
+                border-radius: 20px;
+                margin-bottom: 10px;
+                box-shadow: 0px 0px 2px 0px $color-light;
+                &--link {
+                    font-family: $inria;
+                    font-size: 1rem;
+                    color: $color-light;
+                    text-decoration: none;
+                }
+            }
+            &-title {
+                a {
+                    font-size: 1.5rem;
+                    color: $color-light;
+                    font-family: $kanit;
+                    text-shadow: 2px 2px 2px $color-dark-1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &--indicator {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 1000;
+        display: flex;
+        .indicator {
+            background: $color-muted-2;
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+            border-radius: 50%;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,149 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10rem;
+
+    @include respond(tab-land) {
+        padding: 2rem 5rem;
+    }
+
+    @include respond(phone) {
+        padding: 2rem 1rem;
+    }
+
+    &--title {
+        &-brand {
+            font-family: $inria;
+            font-weight: bold;
+            color: $color-dark-1;
+            font-size: 3rem;
+        }
+    }
+
+    &--menu {
+        &-bar {
+            display: none;
+            &-link {
+                cursor: pointer;
+                svg {
+                    width: 3rem;
+                    height: 3rem;
+                    margin-top: 6px;
+                }
+            }
+            &-link-search {
+                margin-right: 10px;
+                cursor: pointer;
+                margin-top: 8px;
+                svg {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                }
+            }
+            @include respond(tab-port) {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .search-container {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 100px;
+            background: $color-light;
+            bottom: 0;
+            z-index: 1500;
+            padding: 3rem 5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+            .search-label {
+                font-size: 2rem;
+                font-family: $inria;
+            }
+            p {
+                font-size: 1.5rem;
+                font-family: $inria;
+                margin-bottom: 20px;
+            }
+            .search-input {
+                width: 100%;
+                padding: 10px;
+                font-size: 2rem;
+                font-family: $kanit;
+                outline: none;
+                border: 1px solid $color-dark-2;
+                border-radius: 5px;
+                color: $color-dark-2;
+            }
+            .no-result {
+                text-align: center;
+                margin-top: 3rem;
+                font-family: $inria;
+                font-size: 2rem;
+            }
+        }
+        .search-active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .dropdown-active {
+            opacity: 1;
+            visibility: visible;
+        }
+        &-dropdown-lists {
+            position: fixed;
+            z-index: 2000;
+            background-color: $color-light;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 100px;
+            text-align: center;
+            padding-top: 100px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .5s ease;
+            &-item {
+                a {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $color-dark-2;
+                    padding: 1rem 0;
+                    display: block;
+                    font-family: $inria;
+                }
+            }
+        }
+        &-lists {
+            display: flex;
+            align-items: center;
+            @include respond(tab-port) {
+                display: none;
+            }
+            &-item {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: $color-dark-1;
+                    font-family: $inria;
+                    padding: 1rem;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    svg {
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        margin-top: 6px;
+                    }
+                }
+                &:last-child {
+                    a {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
